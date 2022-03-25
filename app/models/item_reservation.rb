@@ -1,0 +1,2 @@
+class ItemReservation < ApplicationRecord
+end
