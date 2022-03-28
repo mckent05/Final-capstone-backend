@@ -12,9 +12,8 @@ class Api::V1::ReservationsController < ApplicationController
   end
 
   def create
-    reserved_item = Item.find(new_reservation_params[:item_id])
-    reservation_made = User.first.reservations.new(start_date: new_reservation_params[:start_date],
-                                                   end_date: new_reservation_params[:end_date])
+    reserved_item = Item.find(params[:id])
+    reservation_made = User.first.reservations.new(new_reservation_params)
     item_reservation = ItemReservation.new(reservation: reservation_made, item: reserved_item)
     if item_reservation.save
       render json: { message: "Reservation for #{reserved_item.name} made succesfully", status: 200 }
@@ -35,6 +34,6 @@ class Api::V1::ReservationsController < ApplicationController
   private
 
   def new_reservation_params
-    params.permit(:start_date, :end_date, :item_id)
+    params.fetch(:reservation).permit(:start_date, :end_date)
   end
 end
