@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Reservation, type: :model do
-
   new_user = User.new(username: 'mckent05')
 
   subject do

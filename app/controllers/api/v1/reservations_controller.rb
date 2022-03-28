@@ -3,14 +3,18 @@ class Api::V1::ReservationsController < ApplicationController
     reservations = User.first.reservations.includes(:item_reservations)
     list = []
     reservations.each do |reservation|
-      reservation.item_reservations.each { |item_reserve| list << { reservation: reservation.as_json(only: [:id, :start_date, :end_date]), item: item_reserve.item.as_json(only: [:id, :name, :capacity, :price, :city, :description, :image]) }}
+      reservation.item_reservations.each do |item_reserve|
+        list << { reservation: reservation.as_json(only: %i[id start_date end_date]),
+                  item: item_reserve.item.as_json(only: %i[id name capacity price city description image]) }
+      end
     end
     render json: { data: list.as_json, status: 200 }
   end
 
   def create
-    reserved_item = Item.find(params[:item_id])
-    reservation_made = User.first.reservations.new(start_date: params[:start_date], end_date: params[:end_date])
+    reserved_item = Item.find(new_reservation_params[:item_id])
+    reservation_made = User.first.reservations.new(start_date: new_reservation_params[:start_date],
+                                                   end_date: new_reservation_params[:end_date])
     item_reservation = ItemReservation.new(reservation: reservation_made, item: reserved_item)
     if item_reservation.save
       render json: { message: "Reservation for #{reserved_item.name} made succesfully", status: 200 }
@@ -28,9 +32,9 @@ class Api::V1::ReservationsController < ApplicationController
     end
   end
 
-  # private
+  private
 
-  # def new_reservation_params
-  #   params.require(:reservation).permit(:start_date, :end_date)
-  # end
+  def new_reservation_params
+    params.permit(:start_date, :end_date, :item_id)
+  end
 end
