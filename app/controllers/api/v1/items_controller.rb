@@ -8,9 +8,9 @@ class Api::V1::ItemsController < ApplicationController
     user = User.find(params[:user_id])
     new_item = user.items.new(items_params)
     if new_item.save
-      render json: { message: "Item created succesfully", status: 200 }
+      render json: { message: 'Item created succesfully', status: 200 }
     else
-      render json: { message: "Item failed to create", status: 400 }
+      render json: { message: 'Item failed to create', status: 400 }
     end
   end
 
