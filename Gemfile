@@ -52,7 +52,10 @@ gem 'bootsnap', require: false
 
 gem 'ffi', '~> 1.15', '>= 1.15.5'
 
+# Add authentication layer to our API
 gem 'devise'
+gem 'devise-jwt'
+
 gem 'rabl'
 
 gem 'cancancan'
