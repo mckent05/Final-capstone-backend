@@ -10,8 +10,8 @@ class Api::V1::ItemsController < ApplicationController
   end
 
   def create
-    user = User.find(params[:user_id])
-    new_item = user.items.new(items_params)
+    # user = User.find(params[:user_id])
+    new_item = current_user.items.new(items_params)
     if new_item.save
       render json: { message: 'Item created succesfully', status: 200 }
     else

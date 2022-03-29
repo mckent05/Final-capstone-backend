@@ -1,6 +1,8 @@
 class Api::V1::ReservationsController < ApplicationController
+  before_action :authenticate_user!
+
   def index
-    reservations = User.first.reservations.includes(:item_reservations)
+    reservations = current_user.reservations.includes(:item_reservations)
     list = []
     reservations.each do |reservation|
       reservation.item_reservations.each do |item_reserve|
@@ -13,7 +15,7 @@ class Api::V1::ReservationsController < ApplicationController
 
   def create
     reserved_item = Item.find(params[:id])
-    reservation_made = User.first.reservations.new(new_reservation_params)
+    reservation_made = current_user.reservations.new(new_reservation_params)
     item_reservation = ItemReservation.new(reservation: reservation_made, item: reserved_item)
     if item_reservation.save
       render json: { message: "Reservation for #{reserved_item.name} made succesfully", status: 200 }
