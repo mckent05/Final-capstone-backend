@@ -60,7 +60,7 @@ gem 'rabl'
 
 gem 'cancancan'
 
-gem 'dotenv-rails', groups: [:development, :test]
+gem 'dotenv-rails', groups: %i[development test]
 # Use Sass to process CSS
 # gem "sassc-rails"
 
