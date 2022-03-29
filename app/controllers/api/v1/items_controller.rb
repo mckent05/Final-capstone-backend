@@ -1,7 +1,10 @@
 class Api::V1::ItemsController < ApplicationController
   def index
     items = Item.all
-    render json: items
+    render json: {
+      data: items.as_json(only: %i[id name capacity price city description image]),
+      status: 200
+    }
   end
 
   def create
@@ -25,6 +28,16 @@ class Api::V1::ItemsController < ApplicationController
 
   def show
     item = Item.find(params[:id])
-    render json: item
+    render json: {
+      data: item.as_json(only: %i[id name capacity price city description image]),
+      status: 200
+    }
   end
+  
+  private 
+
+  def items_params
+    params.require(:item).permit(:name, :capacity, :image, :description, :price, :city)
+  end
+
 end
