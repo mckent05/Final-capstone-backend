@@ -33,11 +33,10 @@ class Api::V1::ItemsController < ApplicationController
       status: 200
     }
   end
-  
-  private 
+
+  private
 
   def items_params
     params.require(:item).permit(:name, :capacity, :image, :description, :price, :city)
   end
-
 end
