@@ -15,3 +15,11 @@ admin = User.create!(username:"admin")
         user_id: admin.id
     )
 end
+
+5.times do
+    Reservation.create!(
+        start_date: Time.now,
+        end_date: Time.now + rand(1..5),
+        user_id: admin.id
+    )
+end
