@@ -12,8 +12,13 @@ gem 'sprockets-rails'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
 
+# Populate database with fake data
+gem 'faker'
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
+
+gem 'rack-cors'
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem 'importmap-rails'
@@ -47,11 +52,15 @@ gem 'bootsnap', require: false
 
 gem 'ffi', '~> 1.15', '>= 1.15.5'
 
+# Add authentication layer to our API
 gem 'devise'
+gem 'devise-jwt'
+
 gem 'rabl'
 
 gem 'cancancan'
 
+gem 'dotenv-rails', groups: %i[development test]
 # Use Sass to process CSS
 # gem "sassc-rails"
 
