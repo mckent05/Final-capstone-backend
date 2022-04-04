@@ -58,7 +58,7 @@ gem 'devise-jwt'
 
 # Generate API docs
 gem 'rswag'
- 
+
 gem 'rabl'
 
 gem 'cancancan'
