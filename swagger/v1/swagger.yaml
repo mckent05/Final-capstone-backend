@@ -1,0 +1,172 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/*path":
+    parameters:
+    - name: path
+      in: path
+      description: any-path
+      required: true
+      schema:
+        type: string
+    get:
+      summary: error api
+      responses:
+        '400':
+          description: Bad Request
+  "/":
+    get:
+      summary: error api
+      responses:
+        '400':
+          description: Bad Request
+  "/api/v1/items":
+    get:
+      summary: list items
+      tags:
+      - Items
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create item
+      tags:
+      - Items
+      parameters:
+      - name: name
+        in: path
+        description: name
+        required: true
+        schema:
+          type: string
+      - name: description
+        in: path
+        description: description
+        required: true
+        schema:
+          type: string
+      - name: image
+        in: path
+        description: image url
+        required: true
+        schema:
+          type: string
+      - name: price
+        in: path
+        description: price
+        required: true
+        schema:
+          type: string
+      - name: city
+        in: path
+        description: city
+        required: true
+        schema:
+          type: string
+      - name: capacity
+        in: path
+        description: capacity
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: successful
+  "/api/v1/items/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show item
+      tags:
+      - Items
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete item
+      tags:
+      - Items
+      responses:
+        '200':
+          description: successful
+  "/api/v1/reservations":
+    get:
+      summary: list reservations
+      tags:
+      - Reservations
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create reservation
+      tags:
+      - Reservations
+      parameters:
+      - name: item_id
+        in: path
+        description: item_id
+        required: true
+        schema:
+          type: string
+      - name: start_date
+        in: path
+        description: start_date
+        required: true
+        schema:
+          type: string
+      - name: end_date
+        in: path
+        description: end_date
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: successful
+  "/api/v1/reservations/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    delete:
+      summary: delete reservation
+      tags:
+      - Reservations
+      responses:
+        '200':
+          description: successful
+  "/users":
+    post:
+      summary: create registration
+      tags:
+      - User Registration
+      responses:
+        '200':
+          description: successful
+  "/users/sign_in":
+    post:
+      summary: create session
+      tags:
+      - User Session
+      responses:
+        '200':
+          description: successful
+  "/users/sign_out":
+    delete:
+      summary: delete session
+      tags:
+      - Sessions
+      responses:
+        '200':
+          description: successful

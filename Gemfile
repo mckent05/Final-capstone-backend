@@ -56,6 +56,9 @@ gem 'ffi', '~> 1.15', '>= 1.15.5'
 gem 'devise'
 gem 'devise-jwt'
 
+# Generate API docs
+gem 'rswag'
+
 gem 'rabl'
 
 gem 'cancancan'
