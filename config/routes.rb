@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     namespace :v1 , defaults: { format: 'json'} do
       resources :items, only: %i[index create destroy show]
       resources :reservations, only: %i[index create destroy]
+      resources :itemreservations, only: %i[show]
     end
   end
 
