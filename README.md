@@ -1,24 +1,76 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Somarvens Arenas API
 
-Things you may want to cover:
+> Rails API app to serve as a back-end for `Somarvens` Application front-end.
 
-* Ruby version
+> The API allows you to Do RESTfull actions for arenas like `list`, `create`, `show`, `delete` arenas. Also can `reserve` an arena for a period of time, `show` or `delete` any of your reservations.  
 
-* System dependencies
+## Built With
 
-* Configuration
+- Rails 7 ~ _Ruby Web development framework_
 
-* Database creation
+## Getting Started
 
-* Database initialization
+To get a local copy up and running follow these simple example steps
 
-* How to run the test suite
+- From your terminal enter in sequence
+  - `git clone git@github.com:mckent05/Final-capstone-backend.git`
+  - `code Final-capstone-backend`
 
-* Services (job queues, cache servers, search engines, etc.)
+### Available Scripts
 
-* Deployment instructions
+In the project directory, run in order:
 
-* ...
+- #### `rails db:create`
+
+  - Creates the project database.
+
+- #### `rails db:migrate`
+
+  - Creates the tables in the database.
+
+- #### `rails db:seed`
+
+  - Populate the tables with default records.
+
+- #### `rails server`
+
+  - Runs the app in the development mode.\
+Open `http://localhost:PORT` to view it in your browser.
+
+### API Documention
+
+- Open `http://localhost:PORT/api-docs/index.html` to view it in your browser.
+
+## Coders
+
+
+👤 **Somdotta Sarkar**
+
+- GitHub: [@Somdotta07](https://github.com/Somdotta07)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/somdottasarkar)
+
+👤 **Akinlade Tope**
+
+- GitHub: [@mckent05](https://github.com/mckent05)
+- LinkedIn: [Akinlade Temitope](https://www.linkedin.com/in/akinladetemitope/)
+
+👤 **Omar Rashad**
+
+- GitHub: [@od-c0d3r](https://github.com/od-c0d3r)
+- LinkedIn: [@omarrashad](https://linkedin.com/in/omarrashad)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## License
+
+This project is [MIT](./MIT.md) licensed.
