@@ -2,7 +2,7 @@ class Api::V1::ItemsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    items = Item.all
+    items = Item.all.order(id: :desc)
     render json: {
       data: items.as_json(only: %i[id name capacity price city description image]),
       status: 200
