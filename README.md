@@ -83,8 +83,12 @@ Feel free to check the [issues page](../../issues/).
 ## Show your support
 
 Give a ⭐️ if you like this project!
+<<<<<<< HEAD
 ## Acknowledgments 
 - [Murat Korkmaz Design on Behance](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign)
+=======
+
+>>>>>>> f518ee43c1e063fe97553b4a6b7621d181994213
 ## License
 
 This project is [MIT](./MIT.md) licensed.
