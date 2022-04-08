@@ -5,13 +5,14 @@
 > Rails API app to serve as a back-end for `Somarven` Application front-end.
 
 > The API allows you to Do RESTfull actions for arenas like `list`, `create`, `show`, `delete` arenas. Also can `reserve` an arena for a period of time, `show` or `delete` any of your reservations.  
-## Live Demo(Back-end)
-[ 👉Please check ](https://somarven.herokuapp.com/api-docs/index.html)
+## Live Demo (Back-end)
+[ 👉 Please check ](https://somarven.herokuapp.com/)
 
 ## Front End Repo
 [ 👉 Here](https://github.com/Somdotta07/Somarven-Arenas-frontend)
 
 ## Kanban Board 
+
 [Link](https://github.com/mckent05/Somarven-Arenas-backend/projects/1)
   - [Initial State1](https://user-images.githubusercontent.com/84907743/162248640-b50cc653-fe10-4b3f-8e9e-b36d429b6894.PNG)
   - [Initial State2](https://user-images.githubusercontent.com/84907743/162248793-3778d5fc-3478-446c-b573-496207718f72.PNG)
@@ -54,7 +55,8 @@ Open `http://localhost:PORT` to view it in your browser.
 
 ### API Documention
 
-- Open `http://localhost:PORT/api-docs/index.html` to view it in your browser.
+- Open `http://localhost:PORT/api-docs/index.html` to view localy or\
+you can got for the online version [here](https://somarven.herokuapp.com/api-docs/index.html) to view it in your browser.
 
 ## Coders
 
@@ -83,12 +85,9 @@ Feel free to check the [issues page](../../issues/).
 ## Show your support
 
 Give a ⭐️ if you like this project!
-<<<<<<< HEAD
+
 ## Acknowledgments 
 - [Murat Korkmaz Design on Behance](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign)
-=======
 
->>>>>>> f518ee43c1e063fe97553b4a6b7621d181994213
 ## License
-
 This project is [MIT](./MIT.md) licensed.
