@@ -2,7 +2,7 @@
 
 # Somarvens Arenas API
 
-> Rails API app to serve as a back-end for `Somarvens` Application front-end.
+> Rails API app to serve as a back-end for `Somarvens` Application front-end...
 
 > The API allows you to Do RESTfull actions for arenas like `list`, `create`, `show`, `delete` arenas. Also can `reserve` an arena for a period of time, `show` or `delete` any of your reservations.  
 
@@ -15,8 +15,8 @@
 To get a local copy up and running follow these simple example steps
 
 - From your terminal enter in sequence
-  - `git clone git@github.com:mckent05/Final-capstone-backend.git`
-  - `code Final-capstone-backend`
+  - `git clone git@github.com:mckent05/Somarven-Arenas-backend.git`.
+  - `code Somarven-Arenas-backend`.
 
 ### Available Scripts
 
@@ -44,7 +44,6 @@ Open `http://localhost:PORT` to view it in your browser.
 - Open `http://localhost:PORT/api-docs/index.html` to view it in your browser.
 
 ## Coders
-
 
 👤 **Somdotta Sarkar**
 
